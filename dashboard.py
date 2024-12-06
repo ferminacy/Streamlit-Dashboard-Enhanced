@@ -50,3 +50,15 @@ st.bar_chart(
     x="week",
     y="Remote",
 )
+
+import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Add a new visualization
+st.markdown("### Sample Line Plot")
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+fig, ax = plt.subplots()
+ax.plot(x, y)
+st.pyplot(fig)
